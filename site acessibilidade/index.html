@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type="text/css" href="style.css"/>
+    <title>Acessibilidade Digital</title>
+</head>
+<body>
+    <h1>Acessibilidade Digital</h1>
+    
+  
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    
+    <button onclick="increaseFontSize()">Aumentar Fonte</button>
+    <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+    <button onclick="resetFontSize()">Restaurar Fonte</button>
+
+    
+    <button onclick="enableHighContrast()">Ativar Alto Contraste</button>
+    <button onclick="disableHighContrast()">Desativar Alto Contraste</button>
+
+
+    <h1>Acessibilidade Digital: Promovendo a Inclusão e a Igualdade Online</h1>
+    <h2 >A acessibilidade digital é um princípio essencial que visa tornar a internet e os recursos tecnológicos acessíveis a todas as pessoas, independentemente de suas habilidades, limitações ou deficiências. 
+
+         Entre as principais barreiras que a acessibilidade digital procura eliminar, destacam-se:
+        
+        Deficiências Visuais: Pessoas com deficiências visuais precisam contar com recursos ampliadores de texto e alto contraste para que possam navegar na web mais fácilmente.
+        
+        Deficiências Auditivas: Recursos como legendas, transcrições e linguagem de sinais são essenciais para tornar o conteúdo de áudio e vídeo acessível.
+        
+        
+        Deficiências Cognitivas: A linguagem clara, o layout organizado e a simplificação da informação ajudam as pessoas com deficiências cognitivas a entenderem melhor o conteúdo online.
+        
+        </h2>
+    <script>
+       
+        let currentFontSize = 16;
+
+        function increaseFontSize() {
+            currentFontSize += 2;
+            document.body.style.fontSize = currentFontSize + "px";
+        }
+
+        function decreaseFontSize() {
+            currentFontSize -= 2;
+            document.body.style.fontSize = currentFontSize + "px";
+        }
+
+        function resetFontSize() {
+            currentFontSize = 16;
+            document.body.style.fontSize = currentFontSize + "px";
+        }
+
+       
+        function enableHighContrast() {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+        }
+
+        function disableHighContrast() {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+        }
+
+    
+    </script>
+</body>
+</html>
